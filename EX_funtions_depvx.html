@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+    </head>
+    <body>      
+        <script>
+            //Bai 1. Tinh binh phuong
+            function binhphuong(y){
+                y *=y;
+                document.write(y);
+            }
+
+            //Bai 2. Tinh the ky
+            function tinhtk(x){
+                if ( x > 0 && x <= 100){
+                    document.write(" The ky thu Nhat");
+                }
+                else if (x > 100){
+                    x = Math.ceil(x / 100);
+                    document.write(" The ky thu " + x);
+                }
+            }
+
+            //Bai 3. Chi lay 10 ky tu dau tien roi them dau ...
+            var str = " Day la mot chuoi dai hon 15 ky tu";
+            function catchuoi(str){
+                document.write(str.slice(0, 9) + "...");   //chi lay 10 ky tu dau tien roi them dau ...
+            }
+
+            //Bai 4
+            //Chi viet hoa chu cai dau tien
+            function OnlyUpFirststring(str1){
+                x1 = str1.charAt(0).toUpperCase();  //lay ky tu dau tien roi chuyen thanh ky tu hoa
+                x2 = str1.slice(1).toLowerCase();   //ky tu tu vi tri index=1 den het' chuyen thanh chu in thuong
+                document.write(x1 + x2);
+            }
+
+            //Bai 5. Lay so be nhat trong mang
+            var arr1 = [5, 4, 2, 6, 8, 8, 9, 12, 19];
+            function sosanh(a, b){
+                return a - b;
+            }
+            function nhonhat(){
+                num1 = arr1.sort(sosanh);
+                num1 = num1[0];
+                document.write(num1);
+            }
+
+            //Bai 6.Sap xep mang gom 5ten cua 5 hoc vien, moi ten hien thi tai mot dong
+            arr2 = ["Tuan", "Anh", "Minh", "Ngoc", "An"];
+            function sapxep(arrsort){
+                arrsort = arrsort.sort();
+                arrsort1 = arrsort.join("<br />");
+                document.write(arrsort1);
+            }
+
+        </script>
+
+    </body>
+
+</html>
